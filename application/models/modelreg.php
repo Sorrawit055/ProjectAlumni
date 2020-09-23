@@ -1,5 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-class Mod_reg extends CI_Model {
+class modelreg extends CI_Model {
 		function __construct(){
             parent::__construct();
         }
@@ -10,8 +10,8 @@ class Mod_reg extends CI_Model {
 		// 	return $result;
 		// }
 
-        function Alumni_name($data){
-			$this->db->insert('name',$data);
+        function Alumniw($data){
+			$this->db->insert('register',$data);
         }
         
 		// function menu_delete($id){

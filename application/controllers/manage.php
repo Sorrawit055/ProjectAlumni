@@ -7,32 +7,35 @@ class Manage extends CI_Controller {
 	public function __construct()
 	{
         parent::__construct();
-		$this->load->model('Mod_reg','Alumni');
+		$this->load->model('modelreg','Alumni');
 	}
 
-public function reg(){
+public function register(){
     $data = array(
-        'mr' => $this->input->post("mr"),
-        'fname' => $this->input->post("fname"),
-        'mre' => $this->input->post("mre"),
-        'ename' => $this->input->post("ename"),
-        'id'=> $this->input->post("id"),
-        'date'=> $this->input->post("date"),
-        'job'=> $this->input->post("job"),
-        'nation'=> $this->input->post("nation"),
-        'nation2'=> $this->input->post("nation2"),
-        'religion'=> $this->input->post("re"),
-        'blood'=> $this->input->post("blood"),
-        'email'=> $this->input->post("email"),
-        'tel'=> $this->input->post("tel"),
-        'facebook'=> $this->input->post("face"),
-        'line'=> $this->input->post("line"),
-        'rey'=> $this->input->post("ry")
+        's_gender' => $this->input->post("s_gender"),
+        's_title' => $this->input->post("s_title"),
+        's_fname' => $this->input->post("s_fname"),
+        's_lname'=> $this->input->post("s_lname"),
+        's_nickname'=> $this->input->post("s_nickname"),
+        's_bday'=> $this->input->post("s_bday"),
+        's_facebook'=> $this->input->post("s_facebook"),
+        's_email'=> $this->input->post("s_email"),
+        's_password'=> $this->input->post("s_password"),
+        's_repassword'=> $this->input->post("s_repassword"),
+        'address1'=> $this->input->post("address1"),
+        'address2'=> $this->input->post("address2"),
+        'address3'=> $this->input->post("address3"),
+        'address4'=> $this->input->post("address4"),
+        'address5'=> $this->input->post("address5"),
+        's_generation'=> $this->input->post("s_generation"),
+        's_address'=> $this->input->post("s_address"),
+        's_phone'=> $this->input->post("s_phone"),
+
 
 
     );
         // $this->Menu->menu_insert($data);
-        $this->Alumni->Alumni_name($data);
+        $this->Alumni->Alumniw($data);
         $this->load->view('home');
         // $this->load->view('view_insert_successwithmenulink');
 
